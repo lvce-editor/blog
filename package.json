@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "dev": "vitepress dev --port 3000",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "vitepress": "^1.0.0-rc.20"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
