@@ -1,4 +1,5 @@
 .vitepress
+!.vitepress/config.mjs
 
 # Logs
 logs

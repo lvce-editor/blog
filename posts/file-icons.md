@@ -73,4 +73,4 @@ Instead of background images and css, the new implementation uses `img` elements
 
 It seems to avoid all issues from before: No css needs to be generated on every page load, no large message needs to be sent to the renderer-process and no large css exists that could increase the duration of recalculate style.
 
-The new icon theme implementation will be available in v0.18.9.
+The new icon theme implementation is available since v0.18.9.
