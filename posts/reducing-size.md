@@ -15,3 +15,7 @@ Some node_modules included in the electron build were not necessary to include o
 ## Higher compression 65.7 MB
 
 Higher xz compression, reducing size, is enabled since v0.18.1.
+
+## Some functionality added 69.5 MB
+
+With some functionality added and using newer electron versions, file size has increased a bit to 69.5 MB in v30.0.0.
