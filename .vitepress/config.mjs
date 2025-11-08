@@ -14,4 +14,5 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://lvce-editor.github.io/blog/',
   },
+  srcExclude: ['README.md'],
 })
