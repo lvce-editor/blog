@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Lvce Editor',
-  description: 'Lvce Editor',
+  title: 'Lvce Editor Blog',
+  description: 'Lvce Editor Blog',
   base: '/blog/',
   themeConfig: {
     nav: [{ text: 'Home', link: '/' }],
