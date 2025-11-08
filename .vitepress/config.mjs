@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Lvce Editor',
   description: 'Lvce Editor',
-  base: '/blog',
+  base: '/blog/',
   themeConfig: {
     nav: [{ text: 'Home', link: '/' }],
     sidebar: [],
@@ -12,6 +12,6 @@ export default defineConfig({
     ],
   },
   sitemap: {
-    hostname: 'https://lvce-editor.github.io',
+    hostname: 'https://lvce-editor.github.io/blog/',
   },
 })
