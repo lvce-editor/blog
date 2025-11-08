@@ -11,4 +11,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/lvce-editor/blog' },
     ],
   },
+  sitemap: {
+    hostname: 'https://lvce-editor.github.io',
+  },
 })
