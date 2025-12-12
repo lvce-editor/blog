@@ -1,5 +1,7 @@
 # Blog
 
+A technical blog for Lvce Editor covering development insights and implementation details.
+
 ## Contributing
 
 ```sh
