@@ -18,22 +18,6 @@ export default defineConfig({
   },
   srcExclude: ['README.md'],
   vite: {
-    plugins: [
-      {
-        name: 'copy-google-verification',
-        closeBundle() {
-          const src = join(process.cwd(), 'google57d4e51aaf0cda26.html')
-          const dest = join(
-            process.cwd(),
-            '.vitepress/dist/google57d4e51aaf0cda26.html',
-          )
-          try {
-            copyFileSync(src, dest)
-          } catch (error) {
-            console.error('Failed to copy Google verification file:', error)
-          }
-        },
-      },
-    ],
+    plugins: [,],
   },
 })
