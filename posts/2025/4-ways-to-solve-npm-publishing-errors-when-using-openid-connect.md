@@ -19,7 +19,7 @@ they can be different, for example when using multiple packages in a monorepo.
 
 Ensure to enter the correct url of the github repository on the npm settings page.
 
-![npm-settings](../images/npm-settings.png)
+![npm-settings](../../images/npm-settings.png)
 
 ## 3. Missing repository url in package json
 
