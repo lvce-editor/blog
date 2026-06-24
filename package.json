@@ -2,9 +2,11 @@
   "scripts": {
     "dev": "vitepress dev --port 3000",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "test:e2e": "npm run build && playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "prettier": "^3.7.4",
     "typescript": "^5.9.3",
     "vitepress": "^1.6.4"
