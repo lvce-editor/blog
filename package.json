@@ -5,8 +5,8 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "prettier": "^3.7.4",
-    "typescript": "^5.9.3",
+    "prettier": "^3.8.4",
+    "typescript": "^6.0.3",
     "vitepress": "^1.6.4"
   },
   "prettier": {
