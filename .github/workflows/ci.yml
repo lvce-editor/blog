@@ -38,8 +38,10 @@ jobs:
       - name: npm ci
         run: npm ci
         if: steps.npm-cache.outputs.cache-hit != 'true'
-      - name: Build static site
-        run: npm run build
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+      - name: Run e2e tests
+        run: npm run test:e2e
       - name: Upload artifact
         if: matrix.os == 'ubuntu-22.04'
         uses: actions/upload-pages-artifact@v3

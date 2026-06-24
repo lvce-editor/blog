@@ -1,5 +1,7 @@
 .vitepress/dist
 .vitepress/cache
+playwright-report/
+test-results/
 
 # Logs
 logs
