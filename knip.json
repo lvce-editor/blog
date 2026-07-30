@@ -1,0 +1,9 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": [
+    ".vitepress/config.mjs",
+    "playwright.config.ts",
+    "tests/**/*.spec.ts"
+  ],
+  "project": [".vitepress/**/*.mjs", "*.ts", "tests/**/*.ts"]
+}

@@ -3,6 +3,7 @@
 ## Virtual Dom
 
 Tasks:
+
 - Implement Virtual Dom Diffing
 
 ## Tabs
@@ -10,6 +11,7 @@ Tasks:
 The tabs are not working well.
 
 Tasks:
+
 - Improve tabs so that closing a tab always works as expected.
 
 ## Explorer
@@ -24,8 +26,8 @@ Tasks:
 ## Search
 
 Tasks:
-- Allow collapsing search results
 
+- Allow collapsing search results
 
 ## Source Control
 
@@ -36,6 +38,7 @@ No changes in particular planned.
 So far, Run and Debug has been without any functionality.
 
 Tasks:
+
 - Integrate the Javascript Debug extension into the editor, enabling JavaScript debugging
 
 ## Extensions View
