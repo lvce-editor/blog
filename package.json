@@ -2,13 +2,15 @@
   "scripts": {
     "dev": "vitepress dev --port 3000",
     "build": "vitepress build",
+    "lint": "prettier --check . && knip --no-config-hints",
     "preview": "vitepress preview",
     "test:e2e": "npm run build && playwright test"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
-    "typescript": "^6.0.3",
+    "knip": "^6.29.0",
     "prettier": "^3.8.4",
+    "typescript": "^6.0.3",
     "vitepress": "^1.6.4"
   },
   "prettier": {
