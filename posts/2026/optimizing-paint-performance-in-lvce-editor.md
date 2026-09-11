@@ -4,7 +4,7 @@ Recently we added a [repo for benchmarking typing performance](https://github.co
 
 Comparing it with other editors like monaco editor and Codemirror.
 
-## 1. Avoiding use of translate
+## Avoiding use of translate
 
 What stood out in the paint commands, was the monaco editor and lvce editor used quite a lot of `restore`, `save`, `clipRect` and `translate` paint commands.
 
