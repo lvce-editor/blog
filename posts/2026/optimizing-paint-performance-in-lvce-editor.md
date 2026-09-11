@@ -16,7 +16,7 @@ After some investigation it turned out that the css translate was responsible fo
 <div class="EditorRow" style="translate(0)">Row 1</div>
 ```
 
-Removing the translate usage reduced the number of paint commands significantly from 600 (TODO?) to 268.
+Removing the translate usage reduced the number of paint commands significantly from 407 to 268.
 
 ## Reducing Text Nodes
 
