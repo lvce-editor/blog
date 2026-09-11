@@ -59,6 +59,10 @@ Since the text color of the whitespace doesn't matter anyway, it still looks the
 
 </div>
 
+</div>
+
+<div class="paint-benchmarks">
+
 ## Paint command breakdown
 
 <div class="paint-command-grid">
@@ -363,7 +367,8 @@ Since the text color of the whitespace doesn't matter anyway, it still looks the
 }
 
 @media (min-width: 960px) {
-  .paint-benchmarks {
+  .painting-table,
+  .paint-command-grid {
     width: min(1320px, calc(100vw - 64px));
     margin-left: calc((100% - min(1320px, calc(100vw - 64px))) / 2);
   }
