@@ -2,7 +2,7 @@
 
 Recently we added a repo for [benchmarking typing performance](https://github.com/levivilet/lvce-typing-benchmark) in Lvce Editor.
 
-Comparing it with other editors like monaco editor and Codemirror.
+Comparing the typing performance with other editors like monaco editor and Codemirror.
 
 ## Avoiding use of translate
 
