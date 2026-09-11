@@ -25,10 +25,18 @@ Another thing that stood out was, that codemirror used way less `drawTextBlob` c
 For syntax highlighted code, the syntax highlighter tokenizes each line into an array of tokens. Then, each token gets rendered as a `span` element.
 
 ```html
-<span class="Token TokenKeyword">function</span
-><span class="Token TokenWhitespace"> </span> ><span class="Token TokenFunction"
-  >add</span
->
+<span class="Token TokenKeyword">function</span>
+<span class="Token TokenWhitespace"> </span>
+<span class="Token TokenFunction">add</span>
 ```
 
 The token classnames make it possible to style each token and give it a color that makes sense.
+
+One optimization here is to merge the whitespace tokens with the previous token when rendering the html.
+
+Since the text color of the whitespace doesn't matter anyway, it still looks the same. But renders one less html node, one less text node. And there are fewer `drawTextBlob` paint calls.
+
+```html
+<span class="Token TokenKeyword">function </span>
+<span class="Token TokenFunction">add</span>
+```
