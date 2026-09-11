@@ -119,6 +119,8 @@ export default defineConfig({
   description: 'Lvce Editor Blog',
   base: '/blog/',
   themeConfig: {
+    aside: false,
+    outline: false,
     nav: [{ text: 'Home', link: '/' }],
     sidebar: [],
     socialLinks: [

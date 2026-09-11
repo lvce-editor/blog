@@ -1,0 +1,12 @@
+{
+  "name": "blog",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
+  "postCreateCommand": "npm ci && npx playwright install --with-deps chromium",
+  "customizations": {
+    "vscode": {
+      "extensions": ["esbenp.prettier-vscode"]
+    }
+  },
+  "forwardPorts": [3000],
+  "remoteUser": "node"
+}
