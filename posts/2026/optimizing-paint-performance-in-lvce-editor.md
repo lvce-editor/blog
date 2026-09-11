@@ -8,12 +8,12 @@ Comparing it with other editors like monaco editor and Codemirror.
 
 What stood out in the paint commands, was the monaco editor and lvce editor used quite a lot of `restore`, `save`, `clipRect` and `translate` paint commands.
 
-Whereas codemirror has zero of those.
+Whereas CodeMirror 6 has zero `translate` commands and only three of `save`, `restore`, and `clipRect` commands.
 
 After some investigation it turned out that the css translate was responsible for those calls.
 
 ```html
-<div class="EditorRow" style="translate(0)">Row 1</div>
+<div class="EditorRow" style="translate: 0px">Row 1</div>
 ```
 
 Removing the translate usage reduced the number of paint commands significantly from 407 to 268.
