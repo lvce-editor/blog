@@ -41,7 +41,11 @@ Since the text color of the whitespace doesn't matter anyway, it still looks the
 <span class="Token TokenFunction">add</span>
 ```
 
+<div class="paint-benchmarks">
+
 ## Painting details
+
+<div class="painting-table" role="region" aria-label="Painting details" tabindex="0">
 
 | Editor                             | Paint events | Paint time | Painted area | Largest paint | Paint commands | Layers | Content layers |
 | ---------------------------------- | -----------: | ---------: | -----------: | ------------: | -------------: | -----: | -------------: |
@@ -52,6 +56,8 @@ Since the text color of the whitespace doesn't matter anyway, it still looks the
 | CodeMirror 5 v5.65.21              |         3.35 |    3.82 ms |    3.09 Mpx² |    921.6 Kpx² |            247 |      5 |              2 |
 | CodeJar v4.3.0 + Prism v1.30.0     |          3.1 |    1.51 ms |    2.86 Mpx² |    921.6 Kpx² |            238 |      5 |              2 |
 | Ace Editor v1.44.0                 |          3.1 |    3.42 ms |    2.86 Mpx² |    921.6 Kpx² |            521 |      5 |              2 |
+
+</div>
 
 ## Paint command breakdown
 
@@ -242,7 +248,77 @@ Since the text color of the whitespace doesn't matter anyway, it still looks the
       </article>
 </div>
 
+</div>
+
 <style scoped>
+.paint-benchmarks {
+  --paint-border: #d8e0ec;
+  --paint-muted: #64748b;
+  --paint-heading: #475569;
+  --paint-code-bg: #eef2f7;
+  margin-top: 48px;
+}
+
+:global(.dark .paint-benchmarks) {
+  --paint-border: #353d4b;
+  --paint-muted: #a6b3c5;
+  --paint-heading: #bbc7d8;
+  --paint-code-bg: #272f3c;
+}
+
+.painting-table {
+  overflow-x: auto;
+  margin: 24px 0;
+  padding: 8px 20px;
+  border: 1px solid var(--paint-border);
+  border-radius: 12px;
+}
+
+.paint-benchmarks table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.paint-benchmarks tr,
+.paint-benchmarks th,
+.paint-benchmarks td {
+  border: 0;
+  background: transparent;
+}
+
+.paint-benchmarks th,
+.paint-benchmarks td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--paint-border);
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.paint-benchmarks td {
+  font-size: 15px;
+}
+
+.paint-benchmarks thead th {
+  color: var(--paint-heading);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.painting-table td:first-child {
+  font-weight: 500;
+}
+
+.painting-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
 .paint-command-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -252,76 +328,89 @@ Since the text color of the whitespace doesn't matter anyway, it still looks the
 
 .paint-command-card {
   min-width: 0;
-  padding: 16px;
-  border: 1px solid var(--vp-c-divider);
+  padding: 20px;
+  border: 1px solid var(--paint-border);
   border-radius: 10px;
 }
 
 .paint-command-card h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
 .paint-command-card h3 span {
-  display: block;
-  color: var(--vp-c-text-2);
-  font-size: 14px;
+  display: inline-block;
+  color: var(--paint-muted);
+  font-size: 16px;
   font-weight: 400;
 }
 
 .paint-command-card p {
-  margin: 12px 0;
-  color: var(--vp-c-text-2);
-  font-size: 13px;
+  margin: 12px 0 20px;
+  color: var(--paint-muted);
+  font-size: 16px;
   line-height: 1.5;
 }
 
-.paint-command-card table {
-  display: table;
-  width: 100%;
-  margin: 0;
-  font-size: 12px;
-}
-
-.paint-command-card th,
-.paint-command-card td {
-  padding: 8px 4px;
-  border: 0;
-  border-bottom: 1px solid var(--vp-c-divider);
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-.paint-command-card th:first-child {
-  text-align: left;
-}
-
-.paint-command-card thead th {
-  background: transparent;
-  color: var(--vp-c-text-2);
-  font-size: 11px;
-}
-
-.paint-command-card tr {
-  background: transparent;
-}
-
 .paint-command-card code {
-  padding: 2px;
-  font-size: 11px;
-  white-space: nowrap;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--paint-code-bg);
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+  font-weight: 600;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 960px) {
+  .paint-benchmarks {
+    width: min(1320px, calc(100vw - 64px));
+    margin-left: calc((100% - min(1320px, calc(100vw - 64px))) / 2);
+  }
+}
+
+@media (max-width: 1099px) {
   .paint-command-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 }
-@media (max-width: 359px) {
+
+@media (max-width: 599px) {
+  .painting-table {
+    padding: 8px;
+  }
+
+  .paint-command-card {
+    padding: 16px;
+  }
+
   .paint-command-card table {
     display: block;
     overflow-x: auto;
+  }
+
+  .paint-command-card h3 {
+    font-size: 18px;
+  }
+
+  .paint-command-card p,
+  .paint-command-card td {
+    font-size: 14px;
+  }
+
+  .paint-command-card th,
+  .paint-command-card td {
+    padding: 12px 5px;
+  }
+
+  .paint-command-card thead th {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .paint-command-card code {
+    padding: 2px 4px;
+    font-size: 12px;
   }
 }
 </style>
